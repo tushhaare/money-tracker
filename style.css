@@ -1,0 +1,67 @@
+
+:root{
+  --bg:#f5f6f8;--card:#fff;--text:#17191c;--muted:#69707a;
+  --line:#e3e6ea;--soft:#eef0f2;--danger:#b42318;--good:#067647;
+  --radius:16px
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+button,input,select{font:inherit}
+button{cursor:pointer}
+.app{max-width:900px;margin:auto;padding:18px 14px 44px}
+.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+h1{font-size:25px;line-height:1.1;margin:0}
+h2{font-size:17px;margin:0 0 12px}
+h3{font-size:14px;margin:0 0 7px}
+.muted,.small{color:var(--muted);font-size:12px}
+.icon-btn{width:42px;height:42px;padding:0;border:1px solid var(--line);border-radius:12px;background:#fff}
+.tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:14px}
+.tab{border:1px solid var(--line);background:#fff;color:var(--text);border-radius:11px;padding:10px 4px;font-size:12px;font-weight:650}
+.tab.active{background:var(--text);color:#fff;border-color:var(--text)}
+.view{display:none}.view.active{display:block}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:15px;margin-bottom:12px}
+.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.metric{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}
+.metric.primary{grid-column:1/-1}
+.metric .label{font-size:12px;color:var(--muted)}
+.metric .value{font-size:24px;font-weight:780;margin-top:4px}
+.good{color:var(--good)}.bad{color:var(--danger)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+label{display:block;font-size:12px;color:var(--muted);margin-bottom:4px}
+input,select{width:100%;border:1px solid #d2d6dc;border-radius:11px;background:#fff;padding:11px 12px;margin-bottom:10px}
+.actions{display:flex;gap:7px;flex-wrap:wrap}
+.btn{border:0;border-radius:11px;background:var(--text);color:#fff;padding:10px 13px;font-weight:700}
+.btn.secondary{background:var(--soft);color:var(--text)}
+.btn.danger{background:#fee4e2;color:var(--danger)}
+.section-head{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.tx{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.tx:last-child{border-bottom:0}
+.tx-title{font-weight:700}
+.tx-meta{font-size:12px;color:var(--muted);margin-top:3px}
+.amount{font-weight:750;white-space:nowrap}
+.empty,.loading{padding:14px 0;color:var(--muted);font-size:13px}
+.bar{height:9px;background:#eceff2;border-radius:99px;overflow:hidden;margin-top:7px}
+.bar span{display:block;height:100%;background:var(--text);border-radius:99px}
+.budget-row{padding:10px 0}
+.budget-top{display:flex;justify-content:space-between;gap:8px}
+.pill{display:inline-block;background:var(--soft);padding:3px 7px;border-radius:99px;font-size:11px}
+.pill.over{background:#fee4e2;color:var(--danger)}
+.notice{padding:10px 12px;background:var(--soft);border-radius:11px;font-size:12px;color:#4e5761;margin-bottom:11px}
+.form-box{background:#fafafa;border:1px solid var(--line);border-radius:13px;padding:13px;margin-bottom:10px}
+.chart{height:190px;display:flex;align-items:flex-end;gap:6px;padding:12px 2px 2px;border-bottom:1px solid var(--line);overflow-x:auto}
+.chart-col{flex:1;min-width:20px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.chart-bar{width:70%;max-width:26px;border-radius:6px 6px 0 0;background:var(--text);min-height:2px}
+.chart-label,.chart-value{font-size:9px;color:var(--muted)}
+.chart-label{margin-top:5px}
+.month-select{width:auto;min-width:145px;margin:0}
+.toast{position:fixed;left:50%;bottom:18px;transform:translate(-50%,120px);background:var(--text);color:#fff;padding:10px 14px;border-radius:11px;font-size:13px;transition:.2s;z-index:10;max-width:90vw;text-align:center}
+.toast.show{transform:translate(-50%,0)}
+hr{border:0;border-top:1px solid var(--line);margin:16px 0}
+@media(max-width:600px){
+ .app{padding:13px 10px 32px}
+ .tabs{gap:4px}
+ .tab{font-size:10.5px;padding:9px 2px}
+ .metrics{gap:8px}
+ .metric .value{font-size:21px}
+ .row{grid-template-columns:1fr}
+}
